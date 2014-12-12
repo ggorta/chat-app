@@ -1,4 +1,4 @@
-var ws = new WebSocket("ws://localhost:3000");
+var ws = new WebSocket("ws://genevieve.princesspeach.nyc:3000");
 var textbox = document.querySelector("input");
 var button = document.querySelector("button");
 var body = document.querySelector("body");
