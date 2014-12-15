@@ -4,3 +4,14 @@ body {
 ul {
   list-style: none;
 }
+#div1 {
+  background-color: lightgray;
+  width: 600px;
+}
+#div3 {
+  float: right;
+}
+
+#textbox1 {
+  width: 600px;
+}

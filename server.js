@@ -10,13 +10,15 @@ server.on("connection", function(ws){
     clients.splice(peeps,1);
     console.log("client disconnected");
   });
-  clients.forEach(function(client){
-    client.send("new person in da house");
-  });
   ws.on("message", function(msg){
     console.log(msg);
     clients.forEach(function(ping){
-      ping.send(msg);
+      if(ping !== ws) {
+        var hash = JSON.parse(msg);
+        console.log(hash.name + ": " + hash.words);
+        ping.send(msg);
+      }
     });
   });
+
 });
